@@ -1,5 +1,7 @@
 package com.example.katabanque.persistence.entity;
 
+import com.example.katabanque.domain.model.OperationType;
+
 import javax.persistence.*;
 import java.util.Date;
 

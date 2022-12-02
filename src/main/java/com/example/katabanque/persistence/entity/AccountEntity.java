@@ -21,8 +21,7 @@ public class AccountEntity {
     @Column(name = "balance")
     private double balance;
 
-    @OneToMany(mappedBy = "accountEntity", cascade = CascadeType.ALL)
-    private List<OperationEntity> operations = new java.util.ArrayList<>();
-
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "account", fetch = FetchType.LAZY)
+    private List<OperationEntity> operations;
 
 }
