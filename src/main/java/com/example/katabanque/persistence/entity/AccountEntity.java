@@ -13,9 +13,9 @@ import java.util.List;
 @NoArgsConstructor
 @Table(name = "Account")
 public class AccountEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
     private Long id;
 
     @Column(name = "balance")
@@ -23,5 +23,4 @@ public class AccountEntity {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "account", fetch = FetchType.LAZY)
     private List<OperationEntity> operations;
-
 }

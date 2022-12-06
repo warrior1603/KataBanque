@@ -1,11 +1,17 @@
 package com.example.katabanque.persistence.entity;
 
 import com.example.katabanque.domain.model.OperationType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
+@Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "Operation")
 public class OperationEntity {
     @Id

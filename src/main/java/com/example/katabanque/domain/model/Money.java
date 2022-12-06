@@ -9,4 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Money {
     private double amount;
+    public boolean isPositive(){
+        return amount > 0;
+    }
 }
