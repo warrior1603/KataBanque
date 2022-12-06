@@ -81,7 +81,7 @@ public class AccountAdapter implements AccountPersistencePort, OperationPersiste
 
     public AccountEntity getAccountById(Long accountId) {
         Optional<AccountEntity> optionalAccount = accountRepository.findById(accountId);
-        if (!optionalAccount.isPresent()) {
+        if (optionalAccount.isEmpty()) {
             log.error("No existing account with id {}", accountId);
             throw new HttpClientErrorException(HttpStatus.NOT_FOUND, "No existing account with this id");
         }
